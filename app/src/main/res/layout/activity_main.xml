@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20px"
+    android:orientation="vertical"
+    tools:context="com.example.lenovo.laporanabsensisiswasmk.MainActivity">
+
+    <ImageView
+        android:id="@+id/photo_image_view"
+        android:layout_width="360dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="LAPORAN ABSENSI SISWA"
+        android:id="@+id/laporan_absensi" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="IDENTITAS SISWA YANG TIDAK MASUK"
+        android:id="@+id/identitas_siswatdkmasuk"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/siswa_nama"
+            android:hint="Nama" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/kelas"
+            android:hint="Kelas" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="170sp"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/jam_tdkhadir"
+            android:hint="Jam saat siswa tidak hadir " />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/mp_tdkhadir"
+            android:hint="Mata pelajaran yang tidak dimasuki " />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:id="@+id/mp_guru"
+        android:hint="Nama guru mata pelajaran yang tidak dimasuki siswa " />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="IDENTITAS SISWA PELAPOR"
+        android:id="@+id/identitas_pelapor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        android:padding="20px"
+
+            <EditText
+                android:id="@+id/siswa_pelapor"
+                android:layout_width="170sp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp"
+                android:hint="Nama Pelapor"
+                android:textSize="10sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:id="@+id/kelas_pelapor"
+                android:hint="Kelas" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="ALASAN KETIDAKHADIRAN"
+        android:id="@+id/alasan_ketidakhadiran"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Sakit"
+        android:textSize="12sp"
+        android:text="Izin pulang sakit"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Izin"
+        android:textSize="12sp"
+        android:text="Izin pulang kepentingan keluarga"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Kabur"
+        android:textSize="12sp"
+        android:text="Kabur/pulang tanpa alasan"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_lapor"
+        android:text="LAPORKAN"
+        android:layout_marginTop="10dp"
+        android:onClick="LaporSend" />
+</LinearLayout>
+
